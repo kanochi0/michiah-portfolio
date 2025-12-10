@@ -1,65 +1,59 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      {/* Hero with photo */}
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="hero-text">
+            <p className="hero-subtitle">Virtual Assistant</p>
+            <h1 className="page-title">
+              Helping entrepreneurs & creators stay organized and consistent.
+            </h1>
+
+            <p className="page-intro">
+              Hi, I’m <strong>Michiah Lee</strong>. I support online entrepreneurs
+              and social media influencers with admin, content, and client
+              support so you can focus on creating, coaching, and growing your
+              business.
+            </p>
+
+            <Link href="/contact" className="book-button">
+              Book a Discovery Call
+            </Link>
+          </div>
+
+          <div className="hero-photo-wrap">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/michiah-headshot.jpg"
+              alt="Michiah Lee, virtual assistant"
+              width={320}
+              height={320}
+              className="hero-photo"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Main content below hero */}
+      <section className="page">
+        <h2 className="section-title">Who I Work With</h2>
+        <ul className="page-list">
+          <li>Coaches and consultants</li>
+          <li>Social media influencers / content creators</li>
+          <li>Online business owners and personal brands</li>
+        </ul>
+
+        <h2 className="section-title">How I Help</h2>
+        <ul className="page-list">
+          <li>Inbox + calendar management so nothing falls through the cracks.</li>
+          <li>Uploading and scheduling your content on the right platforms.</li>
+          <li>Client onboarding, reminders, and simple launch support.</li>
+        </ul>
+      </section>
+    </>
   );
 }

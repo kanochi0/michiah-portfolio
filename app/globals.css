@@ -1,26 +1,173 @@
-@import "tailwindcss";
+/* Base reset-ish */
+* {
+  box-sizing: border-box;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg: #f5f5f7;
+  --text: #111827;
+  --accent: #111827;
+  --accent-soft: #e5e7eb;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout wrapper */
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header / nav */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.nav-links a {
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+
+/* Page content */
+.site-main {
+  flex: 1;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.page-title {
+  font-size: 2.3rem;
+  margin-bottom: 12px;
+}
+
+.page-intro {
+  max-width: 650px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #4b5563;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.page-list {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+/* Call-to-action button */
+.book-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 999px;
+  margin-top: 18px;
+  font-size: 0.98rem;
+}
+
+.book-button:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Hero section */
+.hero {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo {
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+/* Stack on small screens, side-by-side on larger */
+@media (min-width: 768px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+  }
 }
