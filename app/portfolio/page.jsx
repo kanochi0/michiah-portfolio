@@ -5,11 +5,10 @@ export default function Portfolio() {
 
       <p className="page-intro">
         Here are examples of how I support entrepreneurs and influencers behind
-        the scenes. Swap these with real client names and details as they
-        become available.
+        the scenes.
       </p>
 
-      <h2 className="section-title">Content Creator – Instagram & TikTok</h2>
+      <h2 className="section-title">Content Creators– Instagram & TikTok</h2>
       <ul className="page-list">
         <li>Managed a weekly posting schedule using provided content.</li>
         <li>Organized content ideas in a calendar so nothing was missed.</li>
