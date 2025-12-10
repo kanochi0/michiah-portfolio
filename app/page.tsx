@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
@@ -14,10 +15,10 @@ export default function Home() {
             </h1>
 
             <p className="page-intro">
-              Hi, I’m <strong>Michiah Lee</strong>. I support online entrepreneurs
-              and social media influencers with admin, content, and client
-              support so you can focus on creating, coaching, and growing your
-              business.
+              Hi, I’m <strong>Michiah Lee</strong>. I support online
+              entrepreneurs and social media influencers with admin, content,
+              and client support so you can focus on creating, coaching, and
+              growing your business.
             </p>
 
             <Link href="/contact" className="book-button">
@@ -49,7 +50,7 @@ export default function Home() {
 
         <h2 className="section-title">How I Help</h2>
         <ul className="page-list">
-          <li>Inbox + calendar management so nothing falls through the cracks.</li>
+          <li>Inbox & calendar management so nothing falls through the cracks.</li>
           <li>Uploading and scheduling your content on the right platforms.</li>
           <li>Client onboarding, reminders, and simple launch support.</li>
         </ul>

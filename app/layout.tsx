@@ -1,12 +1,18 @@
 import "./globals.css";
+import type { Metadata } from "next";
 import Link from "next/link";
+import React from "react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Michiah Lee | Virtual Assistant",
   description: "Virtual assistant for entrepreneurs and content creators.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
@@ -28,7 +34,8 @@ export default function RootLayout({ children }) {
           <main className="site-main">{children}</main>
 
           <footer className="site-footer">
-            © {new Date().getFullYear()} Michiah Lee · Virtual Assistant for Entrepreneurs & Creators
+            © {new Date().getFullYear()} Michiah Lee · Virtual Assistant for
+            Entrepreneurs & Creators
           </footer>
         </div>
       </body>
