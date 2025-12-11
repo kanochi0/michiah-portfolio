@@ -9,7 +9,7 @@ export default function Contact() {
       </p>
 
       <a
-        href="https://calendly.com/your-michiah-link-here"
+        href="https://calendly.com/michiah-lee/30min"
         target="_blank"
         rel="noreferrer"
         className="book-button"
