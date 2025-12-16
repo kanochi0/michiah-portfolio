@@ -1,6 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+
+const testimonials = [
+  {
+    quote:
+      "Michiah helped me get my calendar and inbox under control. I stopped missing messages, and my week finally felt organized.",
+    name: "Taylor.E",
+    role: "Business Coach",
+    stars: 5,
+  },
+  {
+    quote:
+      "Posting consistently was my biggest struggle. With Michiah managing my schedule, I stayed visible without feeling overwhelmed.",
+    name: "JBL",
+    role: "Content Creator",
+    stars: 5,
+  },
+  {
+    quote:
+      "She’s proactive, reliable, and easy to work with. The systems she set up saved me hours every week.",
+    name: "K.B",
+    role: "Online Entrepreneur",
+    stars: 5,
+  },
+];
 
 export default function Home() {
   return (
@@ -54,6 +77,30 @@ export default function Home() {
           <li>Uploading and scheduling your content on the right platforms.</li>
           <li>Client onboarding, reminders, and simple launch support.</li>
         </ul>
+
+        {/* Testimonials */}
+        <section className="page-section">
+          <p className="section-subtitle">Testimonials</p>
+          <h2 className="section-title">What clients say</h2>
+
+          <div className="testimonial-grid">
+            {testimonials.map((t, i) => (
+              <div className="testimonial-card" key={i}>
+                <div className="testimonial-stars">
+                  {"★".repeat(t.stars)}
+                  {"☆".repeat(5 - t.stars)}
+                </div>
+
+                <p className="testimonial-quote">“{t.quote}”</p>
+
+                <div className="testimonial-meta">
+                  <span className="testimonial-name">{t.name}</span>
+                  <span className="testimonial-role">{t.role}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </section>
     </>
   );
