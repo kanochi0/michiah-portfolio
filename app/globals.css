@@ -161,6 +161,7 @@ a:hover {
 .hero-photo {
   border-radius: 999px;
   object-fit: cover;
+  object-position: top center;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
 }
 
