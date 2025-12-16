@@ -53,8 +53,8 @@ export default function Home() {
             <Image
               src="/michiah-headshot.jpg"
               alt="Michiah Lee, virtual assistant"
-              width={420}
-              height={420}
+              width={320}
+              height={320}
               className="hero-photo"
               priority
             />
